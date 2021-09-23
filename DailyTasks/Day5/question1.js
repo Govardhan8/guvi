@@ -89,10 +89,16 @@
 })()
 
 //Rotate an array by k times
-;(function (k = 1) {
-	var arr = [1, 2, 3, 4, 5]
-	var result = k % 2 === 0 ? arr : arr.reverse()
-	console.log(`Array is rotated ${k} times`)
-	console.log(result)
-	return result
+;(function () {
+	var arr = [1, 2, 3, 4, 5, 6, 7]
+	var k = 3
+	k = k % arr.length
+	out = arr.slice(k + 1, arr.length)
+	var count = out.length
+	for (var i = 0; i < k + 1; i++) {
+		out[count] = arr[i]
+		count += 1
+	}
+	console.log(out)
 })()
+
