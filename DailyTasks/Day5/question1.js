@@ -33,8 +33,7 @@
 //Return all the prime numbers in an array
 ;(function () {
 	var arr = [1, 2, 3, 5, 6, 7, 8, 9, 10]
-	var result = []
-	result = arr.filter((a) => {
+	let result = arr.filter((a) => {
 		let flag = false
 		if (a > 2) {
 			for (let i = 2; i < a / 2; i++) {
