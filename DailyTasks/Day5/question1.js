@@ -36,7 +36,7 @@
 	let result = arr.filter((a) => {
 		let flag = false
 		if (a > 2) {
-			for (let i = 2; i < a / 2; i++) {
+			for (let i = 2; i <= a / 2; i++) {
 				if (a % i === 0) {
 					flag = true
 					break
