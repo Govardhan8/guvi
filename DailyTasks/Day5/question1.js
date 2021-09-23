@@ -90,12 +90,12 @@
 
 //Rotate an array by k times
 ;(function () {
-	var arr = [1, 2, 3, 4, 5, 6, 7]
+	var arr = [1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13]
 	var k = 3
 	k = k % arr.length
-	out = arr.slice(k + 1, arr.length)
+	out = arr.slice(k, arr.length)
 	var count = out.length
-	for (var i = 0; i < k + 1; i++) {
+	for (var i = 0; i < k; i++) {
 		out[count] = arr[i]
 		count += 1
 	}
