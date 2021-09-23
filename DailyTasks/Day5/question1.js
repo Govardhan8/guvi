@@ -25,12 +25,9 @@
 //Sum of all numbers in an array
 ;(function () {
 	var arr = [1, 2, 3, 4, 5]
-	var sum = 0
-	arr.map((a) => {
-		sum += a
-	})
-	console.log(`Sum of the array is ${sum}`)
-	return sum
+	let result = arr.reduce((curr, sum) => curr + sum, 0)
+	console.log(`The sum of the elements is ${result}`)
+	return result
 })()
 
 //Return all the prime numbers in an array
