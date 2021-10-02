@@ -1,0 +1,76 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+		</style>
+		<title>Question 7</title>
+	</head>
+	<body>
+		<form action="submit" class="form_design">
+			<h1 class="form_title">Yes! I want to subscribe to <i>Mag-o-zine</i></h1>
+			<div class="flex-row inputLine">
+				<div class="inputContainer">
+					<input id="fName" type="text" class="form-input" required /><label
+						for="fName"
+						>First Name</label
+					>
+				</div>
+				<div class="inputContainer">
+					<input id="lName" type="text" class="form-input" required /><label
+						for="lName"
+						>Last Name</label
+					>
+				</div>
+			</div>
+			<div class="inputContainer inputLine">
+				<input id="address" type="text" class="form-input" required /><label
+					for="address"
+					>Address</label
+				>
+			</div>
+			<div class="flex-row inputLine">
+				<div class="inputContainer">
+					<input id="city" type="text" class="form-input" required /><label
+						for="city"
+						>City</label
+					>
+				</div>
+				<div class="inputContainer">
+					<input id="state" type="text" class="form-input" required /><label
+						for="state"
+						>State</label
+					>
+				</div>
+				<div class="inputContainer">
+					<input id="zip" type="number" class="form-input" required /><label
+						for="zip"
+						>Zip</label
+					>
+				</div>
+			</div>
+			<div class="flex-row sub" style="align-items: center">
+				<h2>Subscribe for:</h2>
+				<input type="checkbox" id="1" value="1" />
+				<label for="1">1 year ($19.95)</label>
+				<input type="checkbox" id="2" value="2" />
+				<label for="2">2 year ($35.00)</label>
+			</div>
+			<div class="inputContainer last">
+				<h2>Send me more information about:</h2>
+				<div class="flex-row">
+					<input type="checkbox" /><label for="1">Computer-Zine</label>
+				</div>
+				<div class="flex-row">
+					<input type="checkbox" /><label for="2">Fishing-Zine</label>
+				</div>
+				<div class="flex-row">
+					<input type="checkbox" /><label for="3">Cat-O-Zine</label>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

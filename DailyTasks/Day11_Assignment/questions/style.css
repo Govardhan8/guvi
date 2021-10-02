@@ -1,0 +1,81 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'DM Serif Display', serif;
+	font-weight: 100;
+}
+
+.form_design {
+	width: 600px;
+	border: 0.5rem solid black;
+	padding-bottom: 1rem;
+	font-weight: bold;
+}
+.flex-row {
+	display: flex;
+	align-items: center;
+}
+.form_title {
+	background: red;
+	color: white;
+	text-align: center;
+	margin: 0.5rem 0.75rem;
+	padding: 0.5rem 0;
+}
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.inputContainer > input {
+	border: none;
+	outline: none;
+	border-bottom: 0.25rem solid black;
+}
+
+.inputContainer > input,
+.inputContainer > label {
+	margin: 0 1rem;
+}
+
+.sub {
+	margin: 0 1rem;
+}
+.sub > label {
+	font-size: 1.25rem;
+}
+.last {
+	margin: 0 1rem;
+}
+.last h2 {
+	margin: 0;
+}
+input[type='checkbox'] {
+	height: 1rem;
+	width: 1rem;
+}
+.sub > input {
+	margin: 0 1rem;
+}
+.last input {
+	margin: 0 0.75rem;
+}
+.last > .flex-row {
+	margin: 0.5rem 0;
+}
+.inputLine {
+	margin: 0.5rem 0;
+}
+td,
+th {
+	padding: 1rem;
+}
+table {
+	border-collapse: collapse;
+}
+.inputForm {
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,49 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.section1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form1 {
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+}
+
+.form1 > label,
+textarea,
+.submit {
+	width: 100%;
+	margin: 1rem 0 0 0;
+}
+
+input {
+	width: 100%;
+	padding: 1rem 0;
+}
+
+ol {
+	list-style: lower-alpha;
+}
+a {
+	font-size: 1.25rem;
+	text-align: center;
+	color: white;
+	padding: 1rem;
+	text-decoration: none;
+	margin: 0.25rem;
+	background: red;
+	width: 7.5rem;
+}
+.home > h1 {
+	color: chocolate;
+	font-size: 3rem;
+	margin: 0;
+}
