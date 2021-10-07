@@ -1,0 +1,208 @@
+:root {
+	--nav-bg-color: #334147;
+	--main-bg-color: #d6d4c6;
+	--secondary-bg-color: rgb(8, 8, 8);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+	width: 100vw;
+	height: 100%;
+}
+.navbar {
+	position: relative;
+	background-color: var(--nav-bg-color);
+	width: 100vw;
+	padding: 2.5vw 0;
+	color: white;
+}
+.fa-github:before {
+	font-size: 1.75rem;
+	margin-left: 1rem;
+	position: absolute;
+	top: 2vw;
+	left: 0;
+}
+p {
+	align-self: center;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+.cover {
+	background: var(--main-bg-color);
+	width: 100w;
+}
+.back {
+	background: var(--secondary-bg-color);
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.searchBlock {
+	grid-area: search;
+	height: 5rem;
+}
+input[type='search'] {
+	width: 17rem;
+	border-radius: 0.5rem;
+	font-size: 1.15rem;
+	padding: 0.5rem 0.9rem;
+	letter-spacing: 0.25rem;
+}
+.triplets {
+	flex-direction: column;
+	grid-area: triplets;
+}
+.triplets > div {
+	height: 10rem;
+	width: 17rem;
+	border-radius: 5%;
+	margin-bottom: 2rem;
+}
+.solo {
+	grid-area: solo;
+}
+.block {
+	height: 15rem;
+	width: 17rem;
+	border-radius: 5%;
+	margin-bottom: 2rem;
+}
+.mobile {
+	grid-area: mobile;
+}
+.last-block {
+	height: 25rem;
+	min-width: 17rem;
+	border-radius: 5%;
+	margin-bottom: 2rem;
+}
+.container {
+	display: grid;
+	grid-area: container;
+	grid-template-areas:
+		'search'
+		'triplets'
+		'solo'
+		'mobile';
+}
+.kid {
+	grid-area: kid;
+}
+@media (min-width: 32rem) {
+	.searchBlock {
+		height: 7.5rem;
+	}
+	input[type='search'] {
+		height: 5rem;
+		border-radius: 1rem;
+		padding: 0 1rem;
+		letter-spacing: 1rem;
+		font-size: 1.25rem;
+	}
+	input[type='search'],
+	.last-block,
+	.block,
+	.triplets > div {
+		width: 23rem;
+	}
+	.triplets > div {
+		height: 15rem;
+	}
+	.block {
+		height: 25rem;
+	}
+}
+@media (min-width: 48rem) {
+	input[type='search'] {
+		height: 4rem;
+		width: 38rem;
+		padding: 1rem;
+		letter-spacing: 0.75rem;
+		font-size: 1.5rem;
+		border-radius: 1.25rem;
+	}
+	.triplets > div {
+		width: 37rem;
+		height: 20rem;
+	}
+	.block,
+	.last-block {
+		width: 37rem;
+	}
+	.searchBlock {
+		height: 10rem;
+	}
+}
+@media (min-width: 80rem) {
+	.fa-github:before {
+		top: 1.5rem;
+		left: 1.5rem;
+		font-size: 4rem;
+	}
+	p {
+		font-size: 2rem;
+	}
+	input[type='search'] {
+		width: 60rem;
+	}
+	.triplets > div {
+		border-radius: 2rem;
+		width: 18.5rem;
+		height: 15rem;
+	}
+	.triplets {
+		gap: 5rem;
+		max-width: 80rem;
+		flex-direction: row;
+	}
+	.block,
+	.last-block {
+		border-radius: 2rem;
+		width: 65rem;
+	}
+	.container {
+		display: grid;
+		place-content: center;
+		grid-area: container;
+		grid-template-areas:
+			'search'
+			'triplets'
+			'solo'
+			'mobile';
+	}
+}
+@media (min-width: 95rem) {
+	.triplets > div {
+		height: 12rem;
+	}
+	.block {
+		height: 14rem;
+		align-items: flex-start;
+	}
+	.last-block {
+		height: 40rem;
+		width: 20rem;
+	}
+	.maintain {
+		display: grid;
+		max-width: 100rem;
+		grid-template-areas: 'mobile container';
+	}
+	.solo,
+	.triplets {
+		padding-top: 3rem;
+	}
+	.mobile {
+		padding-top: 3rem;
+		padding-right: 3rem;
+		align-items: flex-end;
+	}
+}
