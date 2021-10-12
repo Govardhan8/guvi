@@ -1,0 +1,18 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	background: rgb(84, 227, 16);
+	background: linear-gradient(
+		117deg,
+		rgba(84, 227, 16, 1) 0%,
+		rgba(245, 240, 237, 1) 47%,
+		rgba(214, 111, 42, 1) 100%
+	);
+}
+.head {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: blue;
+	height: 100vh;
+}
