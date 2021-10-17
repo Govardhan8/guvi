@@ -41,7 +41,7 @@ const pagination = (users) => {
 		let count = 1
 		let arr = []
 		for (i = 0; i < users.length; i++) {
-			if (count > 10 || i === users.length - 1) {
+			if (count > 10 || i === users.length) {
 				count = 1
 				arrays.push(arr)
 				arr = []
