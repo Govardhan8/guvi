@@ -1,0 +1,102 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Form</title>
+	</head>
+	<body>
+		<div class="cover">
+			<form class="formController" action="">
+				<input
+					type="text"
+					id="firstName"
+					name="firstName"
+					placeholder="FIRSTNAME"
+					required
+				/>
+
+				<input
+					type="text"
+					id="lastName"
+					name="lastName"
+					placeholder="LASTNAME"
+					required
+				/>
+
+				<textarea
+					rows="4"
+					cols="50"
+					type="text"
+					id="address"
+					name="address"
+					placeholder="ADDRESS"
+					required
+				></textarea>
+
+				<input
+					type="text"
+					id="pincode"
+					name="pincode"
+					class="pincode"
+					placeholder="PINCODE"
+					required
+				/>
+
+				<p>GENDER</p>
+				<div class="radioContainer">
+					<div class="radioOption">
+						<input
+							type="radio"
+							name="gender"
+							id="male"
+							value="male"
+							required
+						/><label for="male">Male </label>
+					</div>
+					<div class="radioOption">
+						<input
+							type="radio"
+							name="gender"
+							id="female"
+							value="female"
+							required
+						/><label for="female">Female </label>
+					</div>
+				</div>
+				<div class="selectContainer">
+					<p>FOOD</p>
+					<select name="food" id="food" multiple="multiple" required>
+						<option value="Indian">INDIAN</option>
+						<option value="Chinese">CHINESE</option>
+						<option value="Thai">THAI</option>
+						<option value="Burmese">BURMESE</option>
+						<option value="Japanese">JAPANESE</option>
+					</select>
+				</div>
+
+				<input
+					type="text"
+					id="state"
+					name="state"
+					placeholder="STATE"
+					required
+				/>
+
+				<input
+					type="text"
+					id="country"
+					name="country"
+					placeholder="COUNTRY"
+					required
+				/>
+
+				<button type="submit" onsubmit="formSubmit()" class="submitButton">
+					Submit
+				</button>
+			</form>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

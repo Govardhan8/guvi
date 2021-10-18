@@ -1,0 +1,157 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+body {
+	background: rgb(2, 0, 36);
+	background: rgb(238, 174, 202);
+	background: radial-gradient(
+		circle,
+		rgba(238, 174, 202, 1) 0%,
+		rgba(148, 187, 233, 1) 100%
+	);
+}
+.formController {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 40rem;
+	align-items: center;
+	border: 1px solid transparent;
+	background: rgb(238, 174, 202);
+	background: radial-gradient(
+		circle,
+		rgba(238, 174, 202, 1) 0%,
+		rgba(148, 187, 233, 1) 100%
+	);
+}
+input[type='text'] {
+	border: none;
+	border-bottom: 1px solid rgb(8, 115, 151);
+	border-radius: 15px;
+}
+textarea,
+select {
+	border-radius: 15px;
+	border: 1px solid rgb(8, 115, 151);
+}
+input[type='text'],
+select,
+textarea {
+	width: 90%;
+	max-width: 25rem;
+	padding: 0.5rem;
+}
+
+.radioContainer {
+	margin-top: 1rem;
+	width: 90%;
+	max-width: 25rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.radioOption > label {
+	margin: 0 0.75rem;
+}
+button {
+	width: 90%;
+	max-width: 25rem;
+	padding: 0.5rem 0.25rem;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background: blue;
+	margin-bottom: 2rem;
+	border-radius: 20px;
+}
+.selectContainer,
+input[type='text'],
+textarea {
+	outline: none;
+	margin: 1.5rem 0;
+}
+.selectContainer {
+	width: 90%;
+	max-width: 25rem;
+	text-align: center;
+}
+select {
+	margin-top: 1rem;
+	text-align: center;
+}
+.cover {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.tableController {
+	width: 90%;
+	max-width: 45rem;
+}
+thead {
+	display: none;
+}
+tr {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 2.5rem;
+}
+td {
+	border: 1px solid rgb(87 99 158);
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	padding: 0.5rem 10px 0.5rem 50%;
+	padding-left: 50%;
+	padding-right: 10px;
+	text-align: right;
+	color: #201de0;
+}
+td::before {
+	content: attr(data-label);
+	position: absolute;
+	left: 10px;
+	top: 0.5rem;
+	margin-right: 50%;
+	height: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rebeccapurple;
+}
+@media (min-width: 768px) {
+	table {
+		max-width: 1600px;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	thead {
+		display: block;
+	}
+	tr {
+		display: grid;
+		width: min-content;
+		margin: 0;
+		grid-template-columns: repeat(8, 90px);
+	}
+	td {
+		padding: 0;
+	}
+	td::before {
+		display: none;
+	}
+}
+@media (min-width: 1000px) {
+	tr {
+		grid-template-columns: repeat(8, 120px);
+	}
+	td {
+		padding: 1rem;
+		text-align: center;
+	}
+}
