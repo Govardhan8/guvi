@@ -21,8 +21,8 @@ const getUsers = async () => {
 		<button onclick="deleteUser(${user.id})" class="deleteUser"><i class="fas fa-trash-alt"></i></button>
 		</div>	
 		<div class="editBox editUser_${user.id}">
-			<input type="text" placeholder="User Name" class="name${user.id}" autocomplete="off"/>
-			<input type="text" placeholder="Avatar URL" class="url${user.id}" autocomplete="off"/>
+			<input type="text" placeholder="User Name" class="name${user.id}" value="${user.name}" autocomplete="off"/>
+			<input type="text" placeholder="Avatar URL" class="url${user.id}" value="${user.avatar}"" autocomplete="off"/>
 			<button class="save_${user.id}" onclick="updateUser(${user.id})">Save</button>
 		</div>
 		</div>
