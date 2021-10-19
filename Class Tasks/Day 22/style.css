@@ -84,6 +84,10 @@ img {
 	box-shadow: 1px -1px 5px 5px rgba(71, 58, 58, 0.72);
 	-webkit-box-shadow: 1px -1px 5px 5px rgba(71, 58, 58, 0.72);
 	-moz-box-shadow: 1px -1px 5px 5px rgba(71, 58, 58, 0.72);
+	transition: all 0.2s;
+}
+.userBlock:hover {
+	transform: scale(1.1);
 }
 .editUser {
 	background: transparent;
