@@ -1,0 +1,116 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* colors used */
+	--primary-background-color: rgb(151, 146, 146);
+	--main-background-color: black;
+
+	/* font colors */
+	--main-font-color: black;
+	--primary-font-color: rgb(196, 11, 11);
+	--secondary-font-color: rgb(175, 103, 15);
+
+	/* fonts used */
+	--main-font-family: 'Mochiy Pop One', sans-serif;
+	--primary-font-family: 'Fruktur', cursive;
+}
+
+.navbar {
+	width: 100%;
+	/*Making the navbar sticky and center aligned*/
+	position: sticky;
+	top: 0;
+	text-align: center;
+	padding: 1rem 0;
+	background: var(--primary-background-color);
+	/*To keep the navbar on top of everything else*/
+	z-index: 100;
+	font-family: var(--main-font-family);
+	letter-spacing: 2px;
+}
+.navbar h2 {
+	margin: 0;
+	/*Giving shadow to navigation bar heading*/
+	text-shadow: 0.1rem 0.11rem 0 white;
+}
+
+/*Making the content in main container centrally placed*/
+.mainContainer {
+	width: 100%;
+	background: var(--main-background-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*Section containing the image containers*/
+.container {
+	/*dynamic elements for different screen sizes*/
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 75rem;
+	padding: 1.5rem 0;
+	justify-content: center;
+	gap: 1rem;
+	background: var(--main-background-color);
+}
+.imageContainer {
+	height: 100%;
+	width: 100%;
+	max-width: 20rem;
+	background: var(--primary-background-color);
+	border-radius: 2rem;
+	margin: 1rem;
+	transition: all 0.2s ease-out;
+}
+
+/*When image container is hovered*/
+.imageContainer:hover {
+	transform: scale(1.05);
+}
+.image {
+	width: 100%;
+	max-width: 30rem;
+	height: 25rem;
+	border-radius: 2rem 2rem 0 0;
+	object-fit: fill;
+	object-position: center center;
+}
+.name {
+	/*Making the author content center aligned*/
+	text-align: center;
+	color: var(--primary-font-color);
+	padding: 1rem 0;
+	font-family: var(--primary-font-family);
+	letter-spacing: 2px;
+	text-shadow: 0.1rem 0.12rem 0 rgb(19, 18, 18);
+}
+.name span {
+	text-transform: uppercase;
+	color: var(--secondary-font-color);
+}
+
+.footer {
+	width: 100%;
+	height: 3rem;
+	font-size: 1.5rem;
+	/*Making the content centrally aligned*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--primary-background-color);
+	gap: 1rem;
+}
+
+/*When screen size is over 640px*/
+@media (min-width: 40rem) {
+	.footer {
+		/*Resizing footer and the elements*/
+		height: 5rem;
+		font-size: 3rem;
+		gap: 3rem;
+	}
+}
