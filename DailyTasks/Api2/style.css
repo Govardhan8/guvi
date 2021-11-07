@@ -197,7 +197,7 @@
 	}
 }
 
-/*When screen size is over 672px*/
+/*When screen size is over 1200px*/
 @media (min-width: 75rem) {
 	/*Resizing for larger screens*/
 	.navbar h2 {
