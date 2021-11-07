@@ -2,7 +2,6 @@ const fetchData = async () => {
 	// Fetching the data from api
 	const data = await fetch('https://rickandmortyapi.com/api/character/')
 	const jsonData = await data.json()
-	console.log(jsonData.results)
 	//Calling the function to render Data in html
 	render(jsonData.results)
 }
