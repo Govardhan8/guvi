@@ -1,0 +1,116 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* colors used */
+	--primary-background-color: whitesmoke;
+	--main-background-color: black;
+	--image-container-background-color: slategray;
+
+	/* font colors */
+	--main-font-color: black;
+	--primary-font-color: white;
+	--secondary-font-color: bisque;
+
+	/* fonts used */
+	--main-font-family: 'Mochiy Pop One', sans-serif;
+	--primary-font-family: 'Fruktur', cursive;
+}
+
+.navbar {
+	width: 100%;
+	/*Making the navbar sticky and center aligned*/
+	position: sticky;
+	top: 0;
+	text-align: center;
+	padding: 1rem 0;
+	background: var(--primary-background-color);
+	/*To keep the navbar on top of everything else*/
+	z-index: 100;
+	font-family: var(--main-font-family);
+	letter-spacing: 2px;
+}
+.navbar h2 {
+	margin: 0;
+}
+
+/*Making the content in main container centrally placed*/
+.mainContainer {
+	max-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mainContainer {
+	width: 100%;
+	background: var(--main-background-color);
+}
+.container {
+	display: grid;
+	max-width: 75rem;
+	padding: 1.5rem 0;
+	gap: 1rem;
+	background: var(--main-background-color);
+}
+.imageContainer {
+	max-width: 32rem;
+	background: var(--image-container-background-color);
+	border-radius: 1rem;
+	margin: 1rem;
+	transition: all 0.2s ease-out;
+}
+
+/*When image container is hovered*/
+.imageContainer:hover {
+	transform: scale(1.05);
+}
+.image {
+	width: 100%;
+	max-width: 30rem;
+	height: 20rem;
+	padding: 1rem;
+	border-radius: 2rem !important;
+	object-fit: cover;
+	object-position: bottom center;
+}
+.author {
+	/*Making the author content center aligned*/
+	text-align: center;
+	color: var(--primary-font-color);
+	padding-bottom: 1rem;
+	font-family: var(--primary-font-family);
+	letter-spacing: 2px;
+}
+.author span {
+	text-transform: uppercase;
+	color: var(--secondary-font-color);
+}
+
+.footer {
+	width: 100%;
+	height: 3rem;
+	font-size: 1.5rem;
+	/*Making the content centrally aligned*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--primary-background-color);
+	gap: 1rem;
+}
+
+/*When screen size is over 960px*/
+@media (min-width: 60rem) {
+	.container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.footer {
+		/*Resizing footer and the elements*/
+		height: 5rem;
+		font-size: 3rem;
+		gap: 3rem;
+	}
+}
