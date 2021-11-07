@@ -1,0 +1,210 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*To define the reusable values*/
+:root {
+	/* colors used */
+	--primary-background-color: darkblue;
+	--main-background-color: rgb(32, 35, 41);
+	--image-container-background-color: whitesmoke;
+	--background-blend: #0cd3e7;
+
+	/* font colors */
+	--main-font-color: lightblue;
+	--primary-font-color: white;
+	--secondary-font-color: lightslategrey;
+	--shadow-font: 0 0 0.5rem #8f7;
+
+	/* fonts used */
+	--main-font-family: 'Roboto', sans-serif;
+	--primary-font-family: 'Roboto Mono', monospace;
+}
+/*Navigation bar*/
+.navbar {
+	width: 100%;
+
+	/*Making the navbar sticky and center aligned*/
+	position: sticky;
+	top: 0;
+	text-align: center;
+	padding: 1rem 0;
+
+	/*To keep the navbar on top of everything else*/
+	z-index: 100;
+	font-family: var(--main-font-family);
+	color: var(--main-font-color);
+
+	/*Shadow for the text*/
+	text-shadow: var(--shadow-font);
+	letter-spacing: 2px;
+
+	/* Blending color with an image */
+	background: url('https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-109168/Rick-And-Morty-Hd-In-Resolution.jpg')
+		var(--primary-background-color) no-repeat;
+	background-blend-mode: luminosity;
+	background-size: cover;
+
+	border-bottom: 0.1px solid var(--image-container-background-color);
+}
+/* Heading in navigation bar */
+.navbar h2 {
+	font-size: 1.25rem;
+	margin: 0;
+	letter-spacing: 10px;
+}
+
+/*Main content*/
+.mainContainer {
+	max-width: 100%;
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background: url(https://www.wallpapertip.com/wmimgs/203-2037408_epic-space-wallpaper.jpg)
+		var(--background-blend) no-repeat;
+	background-size: cover;
+	background-blend-mode: luminosity;
+}
+
+/*Image + details*/
+.imageContainer {
+	padding: 2rem 2rem 1rem 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.image {
+	width: 100%;
+	max-width: 30rem;
+	max-height: 24rem;
+	border-radius: 1.25rem 1.25rem 0 0;
+	object-fit: fill;
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: var(--main-background-color);
+	color: var(--primary-font-color);
+	padding: 1rem;
+	letter-spacing: 2px;
+	border-radius: 0 0 1.25rem 1.25rem;
+}
+.name {
+	font-family: var(--primary-font-family);
+	font-weight: 700;
+	font-size: 1.75rem;
+	letter-spacing: 1.5px;
+}
+
+/* dead/alive + Species*/
+.status {
+	font-family: var(--primary-font-family);
+	font-weight: 200;
+	/*Adding the pseudo element*/
+	position: relative;
+	left: 1.5rem;
+	padding: 0.75rem 0;
+	letter-spacing: 3px;
+	/*Aligning the status color and details */
+	display: flex;
+	align-items: center;
+}
+
+/*Pseudo element*/
+.status:before {
+	content: '';
+	position: absolute;
+	height: 1rem;
+	width: 1rem;
+	left: -1.5rem;
+	border-radius: 50%;
+}
+/*When Alive*/
+.green:before {
+	background: greenyellow;
+}
+/* When dead */
+.red:before {
+	background: crimson;
+}
+
+.location {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 1.15rem 0 1rem 0;
+}
+.location span {
+	color: var(--secondary-font-color);
+}
+.footer {
+	width: 100%;
+	height: 3rem;
+	font-size: 1.5rem;
+	/*Making the content centrally aligned*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-109168/Rick-And-Morty-Hd-In-Resolution.jpg')
+		var(--primary-background-color) no-repeat;
+	background-blend-mode: luminosity;
+	background-size: cover;
+	color: var(--main-font-color);
+	text-shadow: var(--shadow-font);
+	gap: 1rem;
+}
+
+/*When screen size is over 672px*/
+@media (min-width: 42rem) {
+	/*Resizing for larger screens*/
+	.navbar h2 {
+		font-size: 1.5rem;
+	}
+	.imageContainer {
+		padding: 2rem;
+		flex-direction: row;
+	}
+	.name {
+		letter-spacing: 2.5px;
+	}
+	.image {
+		border-radius: 1.5rem 0 0 1.5rem;
+		max-width: 17.5rem;
+	}
+	.details {
+		width: 100%;
+		max-width: 23rem;
+		max-height: 20rem;
+		padding-left: 2rem;
+		border-radius: 0 1.5rem 1.5rem 0;
+	}
+
+	.location {
+		padding: 1rem 0;
+	}
+	.footer {
+		/*Resizing footer and the elements*/
+		height: 5rem;
+		font-size: 3rem;
+		gap: 3rem;
+	}
+}
+
+/*When screen size is over 672px*/
+@media (min-width: 75rem) {
+	/*Resizing for larger screens*/
+	.navbar h2 {
+		font-size: 1.75rem;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
